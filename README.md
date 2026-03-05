@@ -63,4 +63,4 @@ curl -H "Authorization: Bearer 你的CRON_SECRET" http://localhost:3000/api/cron
 1. 将仓库连接到 Vercel，在项目设置中配置上述环境变量。
 2. 在 Vercel 中绑定 Vercel Postgres（或填写自己的 `DATABASE_URL`）。
 3. 部署后，在 Vercel 控制台执行一次 **Database → Run migrations** 或本地执行 `db:push` 后通过 Vercel 的数据库连接串再执行一次。
-4. Cron 会在生产环境按 `vercel.json` 的 schedule 触发（默认每 6 小时）。
+4. Cron 会在生产环境按 `vercel.json` 的 schedule 触发（默认每天 8:00 UTC 一次；Hobby 计划仅支持每日一次，升级 Pro 后可改为更频繁如每 6 小时）。
